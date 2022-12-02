@@ -9,5 +9,5 @@ fn main() {
     let input = fs::read_to_string(
         "/home/kristoffer/programming/advent-of-code-2022/day1-input.txt")
        .unwrap();
-    println!("{}", part1_max_calories(&input));
+    println!("{}", part2_top_three(&input));
 }
