@@ -9,5 +9,5 @@ fn main() {
     let input = fs::read_to_string(
         "/home/kristoffer/programming/advent-of-code-2022/day2-input.txt")
        .unwrap();
-    println!("{}", part1_score(&input));
+    println!("{}", part2_score(&input));
 }
