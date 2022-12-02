@@ -4,8 +4,8 @@ extern crate aoc_runner;
 extern crate aoc_runner_derive;
 
 // No Rust code until day 5
-pub mod day5;
+pub mod day1;
 
 aoc_lib!{
-    year = 2020
+    year = 2022
 }
