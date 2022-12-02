@@ -7,7 +7,7 @@ fn main() {
     // setting the input file path and the function call.
 
     let input = fs::read_to_string(
-       "/home/kristoffer/programming/advent-of-code-2020/day18-input.txt")
+        "/home/kristoffer/programming/advent-of-code-2022/day1-input.txt")
        .unwrap();
-    println!("{}", max_calories(&input)[0]);
+    println!("{}", part1_max_calories(&input));
 }
