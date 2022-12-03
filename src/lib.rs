@@ -1,3 +1,5 @@
+#![allow(non_upper_case_globals)]
+
 extern crate aoc_runner;
 
 #[macro_use]
