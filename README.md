@@ -3,6 +3,10 @@ See: https://adventofcode.com/2022
 # Resources
 
 - https://docs.rs/inpt/latest/inpt/
+- Bit operators:
+  - https://stackoverflow.com/questions/51571066/what-are-the-exact-semantics-of-rusts-shift-operators
+  - https://en.wikipedia.org/wiki/Logical_shift
+  - https://en.wikipedia.org/wiki/Arithmetic_shift
 
 # Snippets and common problems
 
