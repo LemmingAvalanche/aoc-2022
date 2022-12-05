@@ -31,3 +31,8 @@ which tend to be more forgiving.
         .lines()
         .map(|s| s.parse::<u32>().expect("not an integer"));
 ```
+
+# Parsing trouble: feedback and help on Day 5
+
+I wasn’t happy with my approach to parsing so I [asked
+someone](https://www.reddit.com/r/rust/comments/zdkawh/aoc_day_5_how_do_you_deal_with_strange_input/iz1zjjc/).
