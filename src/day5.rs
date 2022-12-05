@@ -98,11 +98,7 @@ fn to_data(input: &str) -> (Vec<Instructions>, Stacks) {
             .unwrap()
             .try_into()
             .unwrap();
-        let mut vec = Vec::new();
-        for s in iter {
-            vec.push(s);
-        }
-        stacks[index] = vec;
+        stacks[index] = iter.collect();
     }
 
     // and now instructions
