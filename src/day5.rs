@@ -31,6 +31,29 @@ pub fn solve_part1(input: &str) -> String {
     answer
 }
 
+pub fn solve_part2(input: &str) -> String {
+    let (instructions, mut stacks) = to_data(&input);
+
+    for Instructions { movex, from, to } in instructions {
+        let from_stack = stacks.get_mut(from).expect("from_stack failed");
+        let drained: Vec<_> = from_stack
+            .drain(from_stack.len() - movex..from_stack.len())
+            .collect();
+        drop(from_stack);
+        let to_stack = stacks.get_mut(to).expect("to_stack failed");
+        to_stack.extend_from_slice(&drained);
+    }
+
+    let mut answer = String::new();
+    for s in &mut stacks {
+        if !s.is_empty() {
+            answer.push(s.pop().unwrap());
+        }
+    }
+
+    answer
+}
+
 fn to_data(input: &str) -> (Vec<Instructions>, Stacks) {
     let (krates, instructions) = input.split_once("\n\n").unwrap();
 
