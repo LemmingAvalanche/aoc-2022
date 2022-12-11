@@ -30,7 +30,13 @@ pub fn solve_part2<'a>(input: &'a str) -> u32 {
     let total_size = output.iter().filter(|(n, _)| n == "/").nth(0).unwrap().1;
     let space_left = 70_000_000 - total_size;
     let need_space = 30_000_000 - space_left;
-    output.iter().map(|p| p.1).filter(|s| s >= &need_space).sorted().nth(0).unwrap()
+    output
+        .iter()
+        .map(|p| p.1)
+        .filter(|s| s >= &need_space)
+        .sorted()
+        .nth(0)
+        .unwrap()
 }
 
 fn count<'a>(pan: &'a PathAndName, lookup: &'a Lookup<'a>, output: &mut Vec<(String, u32)>) -> u32 {
